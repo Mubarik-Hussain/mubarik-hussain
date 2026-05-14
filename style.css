@@ -329,7 +329,7 @@ img { display: block; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 7px;
+  left: 11px;
   top: 10px;
   bottom: 10px;
   width: 2px;
