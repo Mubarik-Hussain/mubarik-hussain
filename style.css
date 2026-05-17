@@ -520,27 +520,53 @@ img { display: block; }
 }
 
 /* ============================================================
-   Certifications
+   Certifications – Owl Carousel
    ============================================================ */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-  gap: 18px;
+.cert-carousel {
+  padding: 0 44px 16px;
+  position: relative;
+}
+.cert-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-60%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.cert-carousel .owl-nav button {
+  pointer-events: all;
+  width: 34px; height: 34px;
+  border-radius: 50% !important;
+  background: var(--blue-light) !important;
+  color: var(--blue) !important;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+.cert-carousel .owl-nav button:hover {
+  background: var(--blue-border) !important;
+}
+.cert-carousel .owl-dots {
+  display: none !important;
 }
 
+.cert-carousel .owl-item {
+  display: flex;
+}
 .cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px 16px 20px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.22s;
-}
-.cert-card.visible {
-  opacity: 1;
-  transform: none;
+  transition: box-shadow 0.22s, transform 0.22s;
 }
 .cert-card:hover {
   box-shadow: 0 6px 24px rgba(0,112,210,0.12);
@@ -571,6 +597,7 @@ img { display: block; }
   color: var(--text);
   line-height: 1.45;
   margin-bottom: 10px;
+  min-height: 2rem;
 }
 .cert-verify {
   font-size: 11px;
@@ -707,7 +734,6 @@ img { display: block; }
   .tl-right { text-align: left; }
 
   .skills-grid { grid-template-columns: 1fr; }
-  .cert-grid { grid-template-columns: repeat(2, 1fr); }
 
   .edu-card { flex-direction: column; gap: 14px; }
 
@@ -716,6 +742,5 @@ img { display: block; }
 }
 
 @media (max-width: 400px) {
-  .cert-grid { grid-template-columns: 1fr 1fr; }
   .about-highlights { flex-direction: column; }
 }
