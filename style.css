@@ -402,6 +402,77 @@ img { display: block; }
 }
 
 /* ============================================================
+   Chrome Extension
+   ============================================================ */
+.ext-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.22s;
+}
+.ext-card:hover { box-shadow: var(--shadow-md); }
+
+.ext-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #E8F0FE;
+  color: #4285F4;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid #C5D8FB;
+}
+
+.ext-info {
+  flex: 1;
+  min-width: 0;
+}
+.ext-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.ext-desc {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  max-width: 540px;
+}
+.ext-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.ext-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4285F4;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.ext-cta:hover { background: #2b6de0; transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .ext-card { flex-direction: column; }
+  .ext-cta { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
    Timeline / Experience
    ============================================================ */
 .timeline {
