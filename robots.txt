@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mubarik-hussain.github.io/mubarik-hussain/sitemap.xml
